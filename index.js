@@ -1,9 +1,8 @@
 (function inject() {
   document.body.style.backgroundColor = 'blue'
-  setTimeout(() => {
-    document.body.style.backgroundColor = 'red'
-  }, 3000)
   const title = document.createElement('h1')
   title.textContent = 'WOOOOOOOOOOOOOOOOOORK'
+  title.style.color = 'green'
+  title.style.fontSize = '50px'
   document.body.appendChild(title)
 })()
