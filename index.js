@@ -5,11 +5,11 @@
 //div.id = 'r_o_o_t'
 //parentBidInfoElement.insertBefore(div, bidInfoElement)
 
-;(async function () {
+;(async function testToken() {
   const pageData = await fetch('https://login.iaai.com/Identity/Account/Login')
     .then(resp => resp.text())
     .catch(err => '')
   const match = pageData.match(/name="__RequestVerificationToken".*?value="(?<token>[^"]+)"/s)
 
-  window.ReactNativeWebView.postMessage(match.toString())
+  window.ReactNativeWebView.postMessage('message from webview')
 })()
