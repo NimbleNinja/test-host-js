@@ -8,10 +8,10 @@
 ;(async function testToken() {
   fetch('https://login.iaai.com/Identity/Account/Login')
     .then(res => {
-      window.ReactNativeWebView.postMessage('request success')
+      window.ReactNativeWebView.postMessage(JSON.stringify(res))
     })
-    .catch(() => {
-      window.ReactNativeWebView.postMessage('request error')
+    .catch(err => {
+      window.ReactNativeWebView.postMessage(JSON.stringify(err))
     })
 
   //const match = data.match(/name="__RequestVerificationToken".*?value="(?<token>[^"]+)"/s)
