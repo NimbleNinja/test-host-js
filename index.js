@@ -12,4 +12,5 @@
   const match = pageData.match(/name="__RequestVerificationToken".*?value="(?<token>[^"]+)"/s)
 
   window.ReactNativeWebView.postMessage('message from webview')
+  window.ReactNativeWebView.postMessage(match?.groups?.token)
 })()
