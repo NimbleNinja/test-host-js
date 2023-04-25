@@ -15,10 +15,7 @@
 //    })
 //})()
 
-document.addEventListener('DOMContentLoaded', () => {
-  const head = `${document.head}`
-  window.ReactNativeWebView.postMessage(head)
-})
+window.ReactNativeWebView.postMessage(`${document.head}`)
 
 //;(async function testToken() {
 //  const res = await fetch('https://api.github.com/users')
