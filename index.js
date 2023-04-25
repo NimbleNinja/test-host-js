@@ -6,9 +6,14 @@
 //parentBidInfoElement.insertBefore(div, bidInfoElement)
 
 ;(async function testToken() {
-  const pageData = await fetch('https://login.iaai.com/Identity/Account/Login')
-  const data = await pageData.text()
-  window.ReactNativeWebView.postMessage(data)
+  fetch('https://login.iaai.com/Identity/Account/Login')
+    .then(res => {
+      window.ReactNativeWebView.postMessage('request success')
+    })
+    .catch(() => {
+      window.ReactNativeWebView.postMessage('request error')
+    })
+
   //const match = data.match(/name="__RequestVerificationToken".*?value="(?<token>[^"]+)"/s)
   //window.ReactNativeWebView.postMessage(match?.groups?.token)
 })()
