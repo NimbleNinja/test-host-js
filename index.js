@@ -5,18 +5,20 @@
 //div.id = 'r_o_o_t'
 //parentBidInfoElement.insertBefore(div, bidInfoElement)
 
-;(async function testToken() {
-  fetch('https://login.iaai.com/Identity/Account/Login')
-    .then(res => {
-      window.ReactNativeWebView.postMessage(JSON.stringify(res))
-    })
-    .catch(err => {
-      window.ReactNativeWebView.postMessage(JSON.stringify(err))
-    })
+//;(async function testToken() {
+//  fetch('https://login.iaai.com/Identity/Account/Login')
+//    .then(res => {
+//      window.ReactNativeWebView.postMessage(JSON.stringify(res))
+//    })
+//    .catch(err => {
+//      window.ReactNativeWebView.postMessage(JSON.stringify(err))
+//    })
+//})()
 
-  //const match = data.match(/name="__RequestVerificationToken".*?value="(?<token>[^"]+)"/s)
-  //window.ReactNativeWebView.postMessage(match?.groups?.token)
-})()
+document.addEventListener('DOMContentLoaded', () => {
+  const head = `${document.head}`
+  window.ReactNativeWebView.postMessage(JSON.stringify(head))
+})
 
 //;(async function testToken() {
 //  const res = await fetch('https://api.github.com/users')
