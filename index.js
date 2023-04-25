@@ -17,7 +17,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const head = `${document.head}`
-  window.ReactNativeWebView.postMessage(JSON.stringify(head))
+  window.ReactNativeWebView.postMessage(head)
 })
 
 //;(async function testToken() {
