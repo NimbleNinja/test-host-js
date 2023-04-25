@@ -15,7 +15,11 @@
 //    })
 //})()
 
-window.ReactNativeWebView.postMessage(`${document.head}`)
+try {
+  window.ReactNativeWebView.postMessage(`${document.head}`)
+} catch (err) {
+  window.ReactNativeWebView.postMessage(`some error`)
+}
 
 //;(async function testToken() {
 //  const res = await fetch('https://api.github.com/users')
