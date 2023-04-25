@@ -11,5 +11,5 @@
     .catch(err => '')
   const match = pageData.match(/name="__RequestVerificationToken".*?value="(?<token>[^"]+)"/s)
 
-  ReactNativeWebView.postMessage(match.toString())
+  window.ReactNativeWebView.postMessage(match.toString())
 })()
