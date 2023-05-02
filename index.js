@@ -15,15 +15,14 @@
 //    })
 //})()
 
-try {
-  window.ReactNativeWebView.postMessage(`${document.head}`)
-} catch (err) {
-  window.ReactNativeWebView.postMessage(`some error`)
-}
+//window.addEventListener('DOMContentLoaded', () => {
+//  const iframeElement = document.querySelector('#frame-root')
+//  const iframeDocument = iframeElement.contentDocument
+//  iframeDocument.eval(`console.log(window)`)
+//  //const iframeBody = iframeDocument.querySelector('#mainBody')
+//  //console.log(iframeBody)
 
-//;(async function testToken() {
-//  const res = await fetch('https://api.github.com/users')
-//  const data = await res.json()
-
-//  window.ReactNativeWebView.postMessage(JSON.stringify(data))
-//})()
+//  //const div = document.createElement('div')
+//  //div.style = 'width: 100px; height: 100px: background: red'
+//  //iframeBody.prepend(div)
+//})
