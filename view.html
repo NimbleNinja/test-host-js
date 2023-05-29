@@ -1,0 +1,599 @@
+<div class="auction-gate-body">
+    <!--    Loader -->
+    <div class="request_loader hidden">
+        <div class="overlay">
+            <div class="animate_block">
+                <div class="ellipse_outer">
+                    <div class="ellipse_inner">
+                        <svg width="81" height="48" viewBox="0 0 81 48" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 2.4375C0.5 1.60908 1.17157 0.9375 2 0.9375H42.1314V46.8321H2C1.17157 46.8321 0.5 46.1605 0.5 45.3321V2.4375Z"
+                                  stroke="#02C399"/>
+                            <path d="M40.5 0.4375H78.9999C80.1044 0.4375 80.9999 1.33293 80.9999 2.4375V45.3321C80.9999 46.4367 80.1044 47.3321 78.9999 47.3321H40.5V0.4375Z"
+                                  fill="#02C399"/>
+                            <path d="M25.9909 36.1411L24.1706 30.1648H15.0172L13.1968 36.1411H7.46094L16.3224 10.9307H22.831L31.7268 36.1411H25.9909ZM22.8997 25.6997L21.0794 19.8608C20.9649 19.4715 20.8103 18.9735 20.6157 18.3667C20.4325 17.7485 20.2436 17.1245 20.049 16.4948C19.8658 15.8537 19.717 15.2984 19.6025 14.829C19.488 15.2984 19.3277 15.8823 19.1216 16.5807C18.927 17.2676 18.7381 17.9202 18.5549 18.5384C18.3717 19.1567 18.2401 19.5975 18.1599 19.8608L16.3567 25.6997H22.8997Z"
+                                  fill="#02C399"/>
+                            <path d="M60.6514 22.0426H70.6119V35.0599C69.2953 35.495 67.9271 35.8442 66.5075 36.1075C65.0878 36.3594 63.4792 36.4853 61.6818 36.4853C59.1859 36.4853 57.0679 35.993 55.3276 35.0084C53.5874 34.0238 52.2651 32.5698 51.3606 30.6464C50.4561 28.723 50.0039 26.3588 50.0039 23.5538C50.0039 20.9206 50.5077 18.6422 51.5152 16.7188C52.5341 14.7954 54.0167 13.3071 55.963 12.2538C57.9208 11.2005 60.3079 10.6738 63.1243 10.6738C64.4524 10.6738 65.7633 10.8169 67.057 11.1032C68.3507 11.3894 69.5242 11.7615 70.5775 12.2194L68.8087 16.4784C68.0416 16.0891 67.1658 15.7629 66.1812 15.4995C65.1966 15.2362 64.1662 15.1045 63.09 15.1045C61.5444 15.1045 60.1991 15.4595 59.0542 16.1693C57.9208 16.8791 57.0392 17.8752 56.4096 19.1574C55.7913 20.4283 55.4822 21.9281 55.4822 23.6569C55.4822 25.294 55.7054 26.748 56.152 28.0189C56.5985 29.2782 57.3026 30.2686 58.2643 30.9899C59.226 31.6997 60.4796 32.0546 62.0252 32.0546C62.7808 32.0546 63.4163 32.0203 63.9315 31.9516C64.4581 31.8714 64.9504 31.7913 65.4084 31.7111V26.4733H60.6514V22.0426Z"
+                                  fill="white"/>
+                        </svg>
+                        <span>Auction Gate</span>
+                    </div>
+                </div>
+            </div>
+            <div class="request_message"></div>
+        </div>
+    </div>
+    <!--    Auth popUp-->
+    <div class="ag-auth-popup hidden" id="ag-auth-popup">
+        <div class="ag-auth-body">
+            <div class="ag-authorization__header">
+                <div class="ag-authorization__block-logo">
+                    <svg width="81" height="48" viewBox="0 0 81 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.5 2.4375C0.5 1.60908 1.17157 0.9375 2 0.9375H42.1314V46.8321H2C1.17157 46.8321 0.5 46.1605 0.5 45.3321V2.4375Z"
+                              stroke="#02C399"/>
+                        <path d="M40.5 0.4375H78.9999C80.1044 0.4375 80.9999 1.33293 80.9999 2.4375V45.3321C80.9999 46.4367 80.1044 47.3321 78.9999 47.3321H40.5V0.4375Z"
+                              fill="#02C399"/>
+                        <path d="M25.9909 36.1411L24.1706 30.1648H15.0172L13.1968 36.1411H7.46094L16.3224 10.9307H22.831L31.7268 36.1411H25.9909ZM22.8997 25.6997L21.0794 19.8608C20.9649 19.4715 20.8103 18.9735 20.6157 18.3667C20.4325 17.7485 20.2436 17.1245 20.049 16.4948C19.8658 15.8537 19.717 15.2984 19.6025 14.829C19.488 15.2984 19.3277 15.8823 19.1216 16.5807C18.927 17.2676 18.7381 17.9202 18.5549 18.5384C18.3717 19.1567 18.2401 19.5975 18.1599 19.8608L16.3567 25.6997H22.8997Z"
+                              fill="#02C399"/>
+                        <path d="M60.6514 22.0426H70.6119V35.0599C69.2953 35.495 67.9271 35.8442 66.5075 36.1075C65.0878 36.3594 63.4792 36.4853 61.6818 36.4853C59.1859 36.4853 57.0679 35.993 55.3276 35.0084C53.5874 34.0238 52.2651 32.5698 51.3606 30.6464C50.4561 28.723 50.0039 26.3588 50.0039 23.5538C50.0039 20.9206 50.5077 18.6422 51.5152 16.7188C52.5341 14.7954 54.0167 13.3071 55.963 12.2538C57.9208 11.2005 60.3079 10.6738 63.1243 10.6738C64.4524 10.6738 65.7633 10.8169 67.057 11.1032C68.3507 11.3894 69.5242 11.7615 70.5775 12.2194L68.8087 16.4784C68.0416 16.0891 67.1658 15.7629 66.1812 15.4995C65.1966 15.2362 64.1662 15.1045 63.09 15.1045C61.5444 15.1045 60.1991 15.4595 59.0542 16.1693C57.9208 16.8791 57.0392 17.8752 56.4096 19.1574C55.7913 20.4283 55.4822 21.9281 55.4822 23.6569C55.4822 25.294 55.7054 26.748 56.152 28.0189C56.5985 29.2782 57.3026 30.2686 58.2643 30.9899C59.226 31.6997 60.4796 32.0546 62.0252 32.0546C62.7808 32.0546 63.4163 32.0203 63.9315 31.9516C64.4581 31.8714 64.9504 31.7913 65.4084 31.7111V26.4733H60.6514V22.0426Z"
+                              fill="white"/>
+                    </svg>
+                </div>
+                <div class="authorization__block-title">
+                    <a href="https:\\AuctionGate.io" data-link="home" target="_blank" class="authorization__title">AuctionGate.io</a>
+                    <h2 class="authorization__subtitle" data-lang-id="1">You can place bids on Copart and IAAI</h2>
+                </div>
+            </div>
+            <div class="authorization__content">
+                <form class="authorization__form" id="auth" autocomplete="on">
+                    <h3 class="authorization__form-title" data-lang-id="59">Login</h3>
+                    <input class="authorization__form-input" type="text" id="email-userID" autocomplete="on"
+                           placeholder="Email/User ID">
+                    <input class="authorization__form-input" type="password" id="password" autocomplete="on"
+                           placeholder="Password">
+                    <span class="auth_eror--text" data-lang-id="2">Login or password incorrect.</span>
+                    <div class="actions">
+                        <label>
+                            <input type="checkbox">
+                            <span data-lang-id="3">Remember Me</span>
+                        </label>
+                        <a href="https://auctiongate.io/forgot-password" data-link="forgotPassword"  target="_blank" data-lang-id="64">Forgot password?</a>
+                    </div>
+                    <button class="authorization__form-btn" type="submit" data-lang-id="59">Login</button>
+                </form>
+                <div class="error_msg"></div>
+                <div class="authorization__block-link">
+                    <span data-lang-id="4">Don`t have an account?</span>
+                    <a class="authorization__link" href="https://auctiongate.io/register" data-link="register" target="_blank" data-lang-id="60">Sing Up</a>
+                </div>
+                <div class="version">
+                    <span data-lang-id="61">Version</span> <span class="version-value" >1.0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Auth error popUp-->
+    <div class="ag-auth-popup hidden" id="ag-auth-error-popup">
+        <div class="ag-auth-body">
+            <div class="ag-authorization__header">
+                <div class="ag-authorization__block-logo">
+                    <svg width="81" height="48" viewBox="0 0 81 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.5 2.4375C0.5 1.60908 1.17157 0.9375 2 0.9375H42.1314V46.8321H2C1.17157 46.8321 0.5 46.1605 0.5 45.3321V2.4375Z"
+                              stroke="#02C399"/>
+                        <path d="M40.5 0.4375H78.9999C80.1044 0.4375 80.9999 1.33293 80.9999 2.4375V45.3321C80.9999 46.4367 80.1044 47.3321 78.9999 47.3321H40.5V0.4375Z"
+                              fill="#02C399"/>
+                        <path d="M25.9909 36.1411L24.1706 30.1648H15.0172L13.1968 36.1411H7.46094L16.3224 10.9307H22.831L31.7268 36.1411H25.9909ZM22.8997 25.6997L21.0794 19.8608C20.9649 19.4715 20.8103 18.9735 20.6157 18.3667C20.4325 17.7485 20.2436 17.1245 20.049 16.4948C19.8658 15.8537 19.717 15.2984 19.6025 14.829C19.488 15.2984 19.3277 15.8823 19.1216 16.5807C18.927 17.2676 18.7381 17.9202 18.5549 18.5384C18.3717 19.1567 18.2401 19.5975 18.1599 19.8608L16.3567 25.6997H22.8997Z"
+                              fill="#02C399"/>
+                        <path d="M60.6514 22.0426H70.6119V35.0599C69.2953 35.495 67.9271 35.8442 66.5075 36.1075C65.0878 36.3594 63.4792 36.4853 61.6818 36.4853C59.1859 36.4853 57.0679 35.993 55.3276 35.0084C53.5874 34.0238 52.2651 32.5698 51.3606 30.6464C50.4561 28.723 50.0039 26.3588 50.0039 23.5538C50.0039 20.9206 50.5077 18.6422 51.5152 16.7188C52.5341 14.7954 54.0167 13.3071 55.963 12.2538C57.9208 11.2005 60.3079 10.6738 63.1243 10.6738C64.4524 10.6738 65.7633 10.8169 67.057 11.1032C68.3507 11.3894 69.5242 11.7615 70.5775 12.2194L68.8087 16.4784C68.0416 16.0891 67.1658 15.7629 66.1812 15.4995C65.1966 15.2362 64.1662 15.1045 63.09 15.1045C61.5444 15.1045 60.1991 15.4595 59.0542 16.1693C57.9208 16.8791 57.0392 17.8752 56.4096 19.1574C55.7913 20.4283 55.4822 21.9281 55.4822 23.6569C55.4822 25.294 55.7054 26.748 56.152 28.0189C56.5985 29.2782 57.3026 30.2686 58.2643 30.9899C59.226 31.6997 60.4796 32.0546 62.0252 32.0546C62.7808 32.0546 63.4163 32.0203 63.9315 31.9516C64.4581 31.8714 64.9504 31.7913 65.4084 31.7111V26.4733H60.6514V22.0426Z"
+                              fill="white"/>
+                    </svg>
+                </div>
+                <div class="authorization__block-title">
+                    <a href="https:\\AuctionGate.io" data-link="home" target="_blank" class="authorization__title">AuctionGate.io</a>
+                    <h2 class="authorization__subtitle" data-lang-id="1">You can place bids on Copart and IAAI</h2>
+                </div>
+            </div>
+            <div class="authorization__content">
+                <div class="ag-message" data-lang-id="73">
+                    Authorization to the auction account is not possible
+                    Wrong login or password
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Create invoice popUp-->
+    <div class="ag-create-invoice-popup hidden" id="ag-create-invoice-popup">
+        <div class="ag-create-invoice-body">
+            <svg class="ag-create-invoice-close" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.682 4.97485L0.707153 0L4.66108e-05 0.707107L4.95005 5.65711L0 10.6072L0.707107 11.3143L5.682 6.33938L10.6569 11.3143L11.364 10.6072L6.41395 5.65711L11.364 0.707107L10.6568 0L5.682 4.97485Z"
+                      fill="#737373"/>
+            </svg>
+            <div class="ag-create-invoice__header">
+                <div class="ag-create-invoice__block-logo">
+                    <svg width="81" height="48" viewBox="0 0 81 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.5 2.4375C0.5 1.60908 1.17157 0.9375 2 0.9375H42.1314V46.8321H2C1.17157 46.8321 0.5 46.1605 0.5 45.3321V2.4375Z"
+                              stroke="#02C399"/>
+                        <path d="M40.5 0.4375H78.9999C80.1044 0.4375 80.9999 1.33293 80.9999 2.4375V45.3321C80.9999 46.4367 80.1044 47.3321 78.9999 47.3321H40.5V0.4375Z"
+                              fill="#02C399"/>
+                        <path d="M25.9909 36.1411L24.1706 30.1648H15.0172L13.1968 36.1411H7.46094L16.3224 10.9307H22.831L31.7268 36.1411H25.9909ZM22.8997 25.6997L21.0794 19.8608C20.9649 19.4715 20.8103 18.9735 20.6157 18.3667C20.4325 17.7485 20.2436 17.1245 20.049 16.4948C19.8658 15.8537 19.717 15.2984 19.6025 14.829C19.488 15.2984 19.3277 15.8823 19.1216 16.5807C18.927 17.2676 18.7381 17.9202 18.5549 18.5384C18.3717 19.1567 18.2401 19.5975 18.1599 19.8608L16.3567 25.6997H22.8997Z"
+                              fill="#02C399"/>
+                        <path d="M60.6514 22.0426H70.6119V35.0599C69.2953 35.495 67.9271 35.8442 66.5075 36.1075C65.0878 36.3594 63.4792 36.4853 61.6818 36.4853C59.1859 36.4853 57.0679 35.993 55.3276 35.0084C53.5874 34.0238 52.2651 32.5698 51.3606 30.6464C50.4561 28.723 50.0039 26.3588 50.0039 23.5538C50.0039 20.9206 50.5077 18.6422 51.5152 16.7188C52.5341 14.7954 54.0167 13.3071 55.963 12.2538C57.9208 11.2005 60.3079 10.6738 63.1243 10.6738C64.4524 10.6738 65.7633 10.8169 67.057 11.1032C68.3507 11.3894 69.5242 11.7615 70.5775 12.2194L68.8087 16.4784C68.0416 16.0891 67.1658 15.7629 66.1812 15.4995C65.1966 15.2362 64.1662 15.1045 63.09 15.1045C61.5444 15.1045 60.1991 15.4595 59.0542 16.1693C57.9208 16.8791 57.0392 17.8752 56.4096 19.1574C55.7913 20.4283 55.4822 21.9281 55.4822 23.6569C55.4822 25.294 55.7054 26.748 56.152 28.0189C56.5985 29.2782 57.3026 30.2686 58.2643 30.9899C59.226 31.6997 60.4796 32.0546 62.0252 32.0546C62.7808 32.0546 63.4163 32.0203 63.9315 31.9516C64.4581 31.8714 64.9504 31.7913 65.4084 31.7111V26.4733H60.6514V22.0426Z"
+                              fill="white"/>
+                    </svg>
+                </div>
+                <div class="ag-create-invoice__block-title">
+                    <a href="https:\\AuctionGate.io" data-link="home" target="_blank"
+                       class="ag-create-invoice__title">AuctionGate.io</a>
+                    <h2 class="ag-create-invoice__subtitle" data-lang-id="1">You can place bids on Copart and
+                        IAAI</h2>
+                </div>
+            </div>
+            <div class="ag-create-invoice__content">
+                <div class="ag-create-invoice__content-title" data-lang-id="5">
+                    Create Invoice
+                </div>
+                <div class="ag-create-invoice_form">
+                    <input type="text" name="client_name" class="ag-create-invoice-name" data-lang-id="66" placeholder="Name">
+                    <input type="text" name="passport" class="ag-create-invoice-name"
+                           data-lang-id="68"  placeholder="ID number, passport number">
+                    <input type="text" name="sum" class="ag-create-invoice-name" data-lang-id="67" placeholder="Amount, USD *">
+                    <label class="ag-create-invoice-by-mail hidden">
+                        <input type="checkbox" name="by_mail" hidden>
+                        <span class="ag-create-invoice-checkbox">
+                                <span></span>
+                            </span>
+                        <span class="ag-create-invoice-text" data-lang-id="70">Send copy to e-mail</span>
+                    </label>
+                    <input type="text" name="email" class="ag-create-invoice-email hidden"  data-lang-id="69" placeholder="Email">
+                    <p class="ag-create-invoice-email-notice" data-lang-id="6">
+                        We will never sell your information or spam you.
+                    </p>
+                    <div class="ag-create-invoice_submit" data-lang-id="7">
+                        Submit
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Show invoices popUp-->
+    <div class="ag-show-invoice-popup hidden" id="ag-show-invoice-popup">
+        <div class="ag-show-invoice-body">
+            <svg class="ag-show-invoice-close" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.682 4.97485L0.707153 0L4.66108e-05 0.707107L4.95005 5.65711L0 10.6072L0.707107 11.3143L5.682 6.33938L10.6569 11.3143L11.364 10.6072L6.41395 5.65711L11.364 0.707107L10.6568 0L5.682 4.97485Z"
+                      fill="#737373"/>
+            </svg>
+            <div class="ag-show-invoice__header">
+                <div class="ag-show-invoice__block-logo">
+                    <svg width="81" height="48" viewBox="0 0 81 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.5 2.4375C0.5 1.60908 1.17157 0.9375 2 0.9375H42.1314V46.8321H2C1.17157 46.8321 0.5 46.1605 0.5 45.3321V2.4375Z"
+                              stroke="#02C399"/>
+                        <path d="M40.5 0.4375H78.9999C80.1044 0.4375 80.9999 1.33293 80.9999 2.4375V45.3321C80.9999 46.4367 80.1044 47.3321 78.9999 47.3321H40.5V0.4375Z"
+                              fill="#02C399"/>
+                        <path d="M25.9909 36.1411L24.1706 30.1648H15.0172L13.1968 36.1411H7.46094L16.3224 10.9307H22.831L31.7268 36.1411H25.9909ZM22.8997 25.6997L21.0794 19.8608C20.9649 19.4715 20.8103 18.9735 20.6157 18.3667C20.4325 17.7485 20.2436 17.1245 20.049 16.4948C19.8658 15.8537 19.717 15.2984 19.6025 14.829C19.488 15.2984 19.3277 15.8823 19.1216 16.5807C18.927 17.2676 18.7381 17.9202 18.5549 18.5384C18.3717 19.1567 18.2401 19.5975 18.1599 19.8608L16.3567 25.6997H22.8997Z"
+                              fill="#02C399"/>
+                        <path d="M60.6514 22.0426H70.6119V35.0599C69.2953 35.495 67.9271 35.8442 66.5075 36.1075C65.0878 36.3594 63.4792 36.4853 61.6818 36.4853C59.1859 36.4853 57.0679 35.993 55.3276 35.0084C53.5874 34.0238 52.2651 32.5698 51.3606 30.6464C50.4561 28.723 50.0039 26.3588 50.0039 23.5538C50.0039 20.9206 50.5077 18.6422 51.5152 16.7188C52.5341 14.7954 54.0167 13.3071 55.963 12.2538C57.9208 11.2005 60.3079 10.6738 63.1243 10.6738C64.4524 10.6738 65.7633 10.8169 67.057 11.1032C68.3507 11.3894 69.5242 11.7615 70.5775 12.2194L68.8087 16.4784C68.0416 16.0891 67.1658 15.7629 66.1812 15.4995C65.1966 15.2362 64.1662 15.1045 63.09 15.1045C61.5444 15.1045 60.1991 15.4595 59.0542 16.1693C57.9208 16.8791 57.0392 17.8752 56.4096 19.1574C55.7913 20.4283 55.4822 21.9281 55.4822 23.6569C55.4822 25.294 55.7054 26.748 56.152 28.0189C56.5985 29.2782 57.3026 30.2686 58.2643 30.9899C59.226 31.6997 60.4796 32.0546 62.0252 32.0546C62.7808 32.0546 63.4163 32.0203 63.9315 31.9516C64.4581 31.8714 64.9504 31.7913 65.4084 31.7111V26.4733H60.6514V22.0426Z"
+                              fill="white"/>
+                    </svg>
+                </div>
+                <div class="ag-show-invoice__block-title">
+                    <a href="https:\\AuctionGate.io" data-link='home' target="_blank"
+                       class="ag-show-invoice__title">AuctionGate.io</a>
+                    <h2 class="ag-show-invoice__subtitle" data-lang-id="1">You can place bids on Copart and
+                        IAAI</h2>
+                </div>
+            </div>
+            <div class="ag-show-invoice__content">
+                <div class="ag-show-invoice__content-title all-lots hidden" data-lang-id="8">
+                    Invoices list
+                </div>
+                <div class="ag-show-invoice__content-title one-lot hidden">
+                    <span data-lang-id="38">Invoices list for lot</span> #<span id="ag-invoice-lot-number"></span>
+                </div>
+                <div class="ag-show-invoice_table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th data-lang-id="9">Lot number</th>
+                            <th data-lang-id="10">Name</th>
+                            <th data-lang-id="11">Amount</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="ag-show-invoice_pagination">
+                    <div class="ag-show-invoice_pagination-item" data-page="1">1</div>
+                    <div class="ag-show-invoice_pagination-item" data-page="2">2</div>
+                    <div class="ag-show-invoice_pagination-item" data-page="3">3</div>
+                    <div class="ag-show-invoice_pagination-item active" data-page="4">4</div>
+                    <div class="ag-show-invoice_pagination-item" data-page="5">5</div>
+                    <div class="ag-show-invoice_pagination-item" data-page="6">6</div>
+                    <div class="ag-show-invoice_pagination-item" data-page="7">7</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Show video popUp-->
+    <div class="ag-show-video-popup hidden" id="ag-show-video-popup">
+        <div class="ag-show-video-body">
+            <div class="video">
+
+            </div>
+        </div>
+    </div>
+    <!--    Header-->
+    <div class="auction-gate-header">
+        <!--    User Info popUp-->
+        <div class="ag-header">
+            <div class="auction-gate-logo">
+                <svg class="auction-gate-logo_image" width="51" height="30" viewBox="0 0 51 30" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 2C0.5 1.17157 1.17157 0.5 2 0.5H26.1667V28.8333H2C1.17157 28.8333 0.5 28.1618 0.5 27.3333V2Z"
+                          stroke="#02C399"/>
+                    <path d="M25.334 0H48.6673C49.7719 0 50.6673 0.895431 50.6673 2V27.3333C50.6673 28.4379 49.7719 29.3333 48.6673 29.3333H25.334V0Z"
+                          fill="#02C399"/>
+                    <path d="M16.2588 22.333L15.1201 18.5947H9.39453L8.25586 22.333H4.66797L10.2109 6.56348H14.2822L19.8467 22.333H16.2588ZM14.3252 15.8018L13.1865 12.1494C13.1149 11.9059 13.0182 11.5944 12.8965 11.2148C12.7819 10.8281 12.6637 10.4378 12.542 10.0439C12.4274 9.6429 12.3343 9.29557 12.2627 9.00195C12.1911 9.29557 12.0908 9.66081 11.9619 10.0977C11.8402 10.5273 11.722 10.9355 11.6074 11.3223C11.4928 11.709 11.4105 11.9847 11.3604 12.1494L10.2324 15.8018H14.3252Z"
+                          fill="#02C399"/>
+                    <path d="M37.9375 13.5137H44.168V21.6562C43.3444 21.9284 42.4886 22.1468 41.6006 22.3115C40.7126 22.4691 39.7064 22.5479 38.582 22.5479C37.0208 22.5479 35.696 22.2399 34.6074 21.624C33.5189 21.0081 32.6917 20.0986 32.126 18.8955C31.5602 17.6924 31.2773 16.2135 31.2773 14.459C31.2773 12.8118 31.5924 11.3867 32.2227 10.1836C32.86 8.98047 33.7874 8.04948 35.0049 7.39062C36.2295 6.73177 37.7227 6.40234 39.4844 6.40234C40.3151 6.40234 41.1351 6.49186 41.9443 6.6709C42.7536 6.84993 43.4876 7.08268 44.1465 7.36914L43.04 10.0332C42.5602 9.78971 42.0124 9.58561 41.3965 9.4209C40.7806 9.25618 40.1361 9.17383 39.4629 9.17383C38.4961 9.17383 37.6546 9.39583 36.9385 9.83984C36.2295 10.2839 35.6781 10.9069 35.2842 11.709C34.8975 12.5039 34.7041 13.4421 34.7041 14.5234C34.7041 15.5475 34.8438 16.457 35.123 17.252C35.4023 18.0397 35.8428 18.6592 36.4443 19.1104C37.0459 19.5544 37.8301 19.7764 38.7969 19.7764C39.2695 19.7764 39.667 19.7549 39.9893 19.7119C40.3187 19.6618 40.6266 19.6117 40.9131 19.5615V16.2852H37.9375V13.5137Z"
+                          fill="white"/>
+                </svg>
+                <span class="auction-gate-logo_title">
+                    AuctionGate.io
+                </span>
+            </div>
+            <div class="auction-gate-auth">
+                <div class="auction-gate-auth_lang" data-lang="1">
+                    <div class="ag-calc-selector_restyle" id="ag-lang">
+                        <span class="ag-calc-selector-viewer" data-select="">Select</span>
+                        <ul>
+                            <li data-value="en">EN</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="auction-gate-auth_icon hidden">
+                    <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M25.6365 25.5766C28.3334 22.8645 30 19.1269 30 15C30 6.71573 23.2843 0 15 0C6.71573 0 0 6.71573 0 15C0 19.1269 1.66659 22.8645 4.36346 25.5766C5.62175 21.9327 8.69976 19.1372 12.5111 18.2764C10.015 17.2857 8.24999 14.849 8.24999 12.0001C8.24999 8.27217 11.2721 5.25009 15 5.25009C18.7279 5.25009 21.75 8.27217 21.75 12.0001C21.75 14.849 19.985 17.2857 17.4888 18.2764C21.3002 19.1372 24.3782 21.9327 25.6365 25.5766Z"
+                              fill="#C4C4C4"/>
+                    </svg>
+                </div>
+                <div class="auction-gate-auth_button" data-lang-id="59">
+                    Login
+                </div>
+            </div>
+        </div>
+
+        <div class="ag-register-banner hidden">
+            <span data-lang-id="82"></span>
+            <div class="ag-register-banner-btn" data-lang-id="83"></div>
+        </div>
+
+        <div class="ag-show-video hidden" data-lang-id="79">
+            About service
+        </div>
+
+        <div class="ag-user-info-popup hidden" id="ag-user-info-popup">
+            <div class="ag-user-info">
+                <p class="ag-user-name"></p>
+            </div>
+            <div class="ag-user-actions">
+                <span class="ag-show-invoices" data-lang-id="8">Invoices list</span>
+                <span class="ag-user-logout" data-lang-id="63">Logout</span>
+            </div>
+            <div class="ag-user-actions">
+                <span class="ag-download-price" data-lang-id="75">Download price</span>
+            </div>
+        </div>
+
+    </div>
+    <!--    Auction auth Error Block-->
+    <div class="item-block auctionAuthErrorMessage hidden" id="auctionAuthErrorMessage">
+        <div class="item-block-body" data-lang-id="81"></div>
+    </div>
+    <!--    VIN Block-->
+    <div class="item-block vin-block">
+        <div class="item-block-body vin-block-body">
+            <div class="vin-block_value">
+                <span>VIN code:</span>
+                <div id="auction-gate-vin"></div>
+            </div>
+            <a href="" class="ag-vin-decoding-link" target="_blank" data-lang-id="32">VIN Decoding</a>
+        </div>
+    </div>
+    <!--    History-->
+    <div class="item-block history-block">
+        <div class="item-block-body">
+            <div class="ag-history-invoice-header hidden">
+                <div class="ag-history-header">
+                    <div class="ag-title" data-lang-id="12">
+                        Sales History:
+                    </div>
+                    <div class="ag-history-last-price">
+                        <span class="ag-history-prise"></span>
+                        <span class="ag-history-status"></span>
+                    </div>
+                    <div class="ag-history-description" data-lang-id="34">
+                        Final bid without auction fee.
+                    </div>
+                </div>
+                <div class="ag-invoice-header hidden">
+                    <div class="ag-title">
+                        <span data-lang-id="33"></span>:
+                    </div>
+                    <div class="ag-invoice_actions">
+                        <div class="ag-vin-invoice history-block_action" id="ag-invoice-new">
+                            <div class="ag-vin-icon">
+                                <svg width="27" height="28" viewBox="0 0 27 28" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="path-1-inside-1_2224_26" fill="white">
+                                        <rect width="21" height="25" rx="1.5"/>
+                                    </mask>
+                                    <rect width="21" height="25" rx="1.5" fill="white" stroke="#02C399"
+                                          stroke-width="4"
+                                          mask="url(#path-1-inside-1_2224_26)"/>
+                                    <circle cx="18" cy="19" r="9" fill="#02C399"/>
+                                    <path d="M17.252 27.0459V25.2354C16.5254 25.2236 15.8545 25.1592 15.2393 25.042C14.6299 24.9189 14.1025 24.7607 13.6572 24.5674V22.6953C14.1084 22.9062 14.665 23.0967 15.3271 23.2666C15.9893 23.4365 16.6309 23.5332 17.252 23.5566V20.2607C16.4023 19.9736 15.7109 19.6748 15.1777 19.3643C14.6504 19.0537 14.2637 18.6934 14.0176 18.2832C13.7715 17.8672 13.6484 17.3691 13.6484 16.7891C13.6484 16.1914 13.7979 15.6787 14.0967 15.251C14.4014 14.8174 14.8232 14.4746 15.3623 14.2227C15.9072 13.9707 16.5371 13.8213 17.252 13.7744V12.3418H18.3945V13.748C19.0449 13.7656 19.6455 13.8389 20.1963 13.9678C20.7529 14.0908 21.2832 14.2637 21.7871 14.4863L21.1455 16.1211C20.7061 15.9453 20.249 15.8018 19.7744 15.6904C19.2998 15.5791 18.8398 15.5029 18.3945 15.4619V18.6787C19.1094 18.9131 19.7451 19.165 20.3018 19.4346C20.8643 19.7041 21.3037 20.0439 21.6201 20.4541C21.9424 20.8584 22.1035 21.3887 22.1035 22.0449C22.1035 22.9062 21.7871 23.6182 21.1543 24.1807C20.5215 24.7373 19.6016 25.0713 18.3945 25.1826V27.0459H17.252ZM18.3945 23.4863C18.957 23.416 19.376 23.2695 19.6514 23.0469C19.9268 22.8184 20.0645 22.5225 20.0645 22.1592C20.0645 21.9131 20.0059 21.7051 19.8887 21.5352C19.7773 21.3652 19.5986 21.2129 19.3525 21.0781C19.1123 20.9434 18.793 20.8115 18.3945 20.6826V23.4863ZM17.252 18.248V15.4971C16.9121 15.5322 16.625 15.6025 16.3906 15.708C16.1562 15.8135 15.9805 15.9512 15.8633 16.1211C15.7461 16.291 15.6875 16.4932 15.6875 16.7275C15.6875 16.9854 15.7402 17.2051 15.8457 17.3867C15.9512 17.5684 16.1182 17.7266 16.3467 17.8613C16.5811 17.9961 16.8828 18.125 17.252 18.248Z"
+                                          fill="white"/>
+                                    <line x1="5" y1="5.5" x2="16" y2="5.5" stroke="#02C399"/>
+                                    <line x1="5" y1="8.5" x2="16" y2="8.5" stroke="#02C399"/>
+                                    <line x1="5" y1="11.5" x2="10" y2="11.5" stroke="#02C399"/>
+                                </svg>
+                            </div>
+                            <span data-lang-id="35"></span>
+                        </div>
+                        <div class="ag-vin-invoice history-block_action" id="ag-invoice-list">
+                            <div class="ag-vin-icon">
+                                <svg width="21" height="25" viewBox="0 0 21 25" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="path-1-inside-1_0_1" fill="white">
+                                        <rect width="21" height="25" rx="1.5"/>
+                                    </mask>
+                                    <rect width="21" height="25" rx="1.5" fill="white" stroke="#0077FF"
+                                          stroke-width="4"/>
+                                    <line x1="5" y1="9.5" x2="16" y2="9.5" stroke="#0077FF"/>
+                                    <line x1="5" y1="12.5" x2="16" y2="12.5" stroke="#0077FF"/>
+                                    <line x1="5" y1="15.5" x2="16" y2="15.5" stroke="#0077FF"/>
+                                </svg>
+                                <svg width="21" height="25" viewBox="0 0 21 25" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="path-1-inside-1_0_1" fill="white">
+                                        <rect width="21" height="25" rx="1.5"/>
+                                    </mask>
+                                    <rect width="21" height="25" rx="1.5" fill="white" stroke="#ADADAD"
+                                          stroke-width="4" mask="url(#path-1-inside-1_0_1)"/>
+                                    <line x1="5" y1="9.5" x2="16" y2="9.5" stroke="#ADADAD"/>
+                                    <line x1="5" y1="12.5" x2="16" y2="12.5" stroke="#ADADAD"/>
+                                    <line x1="5" y1="15.5" x2="16" y2="15.5" stroke="#ADADAD"/>
+                                </svg>
+
+                            </div>
+                            <span data-lang-id="36"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ag-history">
+                <table>
+                    <thead>
+                    <tr>
+                        <th class="ag-lot" data-lang-id="13">Lot number</th>
+                        <th class="ag-auction" data-lang-id="37">Auction</th>
+                        <th class="ag-status" data-lang-id="14">Status</th>
+                        <th class="ag-date" data-lang-id="15">Date</th>
+                        <th class="ag-amount" data-lang-id="11">Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="ag-history-controls">
+                <div class="ag-view-control">
+                    <div class="ag-show-history-all hidden           ">
+                        <span data-lang-id="16">Show all</span> ( <span class="count">2</span> )
+                    </div>
+                </div>
+                <a class="ag-open-on-site ag-history-lot-link" target="_blank" href="#" data-lang-id="17">
+                    FULL HISTORY
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--    Expotr Info-->
+    <div class="item-block export-block">
+        <div class="item-block-body">
+            <div class="item-block-header">
+                <span data-lang-id="39">Document</span>:
+            </div>
+            <div class="ag-export">
+                <table>
+                    <thead>
+                    <tr>
+                        <th class="ag-state-title">
+                            <span data-lang-id="40">Title State</span>:
+                        </th>
+                        <th class="ag-state">
+                            <span data-lang-id="41">Original Title State</span>:
+                        </th>
+                        <th class="ag-title-status">
+                            <span data-lang-id="42">Status</span>:
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="ag-export-message ag-add-payment-info hidden">
+                    <span data-lang-id="43"></span>
+                    <span> </span>
+                    <span id="ag-add-payment-state"></span>
+                    <span id="ag-add-payment-price"></span>
+                </div>
+                <div class="ag-export-message ag-document-no-data-info hidden">
+                    <span data-lang-id="44"></span>
+                    <a href="" class="ag-question-icon" id="ag-question-icon-whatsapp" target="_blank">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.60136 23.2759C8.41851 24.2651 10.4628 24.788 12.5497 24.788C19.4066 24.788 25 19.234 25 12.394C25 9.08706 23.7081 5.96382 21.3515 3.632C18.9949 1.28604 15.8717 0 12.5497 0C5.69279 0 0.0993749 5.55399 0.0993749 12.394C0.0993749 14.5845 0.667234 16.7044 1.76036 18.5839L0 25L6.60136 23.2759ZM12.5497 2.07744C15.318 2.07744 17.916 3.1515 19.8609 5.10175C21.82 7.05201 22.8847 9.63821 22.8847 12.394C22.8847 18.0752 18.2425 22.6964 12.5355 22.6964C10.6758 22.6964 8.8586 22.2018 7.2686 21.2549L6.88529 21.0288L2.96706 22.0464L4.0176 18.2448L3.77626 17.8491C2.73992 16.2097 2.20045 14.316 2.20045 12.3657C2.20045 6.6987 6.8427 2.07744 12.5497 2.07744ZM12.8052 17.5099C13.5434 17.8349 14.1255 18.0187 14.5798 18.16C15.318 18.4002 15.9994 18.3578 16.5389 18.2872C17.1352 18.2024 18.3844 17.5382 18.64 16.8174C18.8955 16.0967 18.8955 15.4748 18.8245 15.3477C18.7535 15.2205 18.5406 15.1357 18.2283 14.9802C17.916 14.8248 16.3827 14.0757 16.0988 13.9768C15.8149 13.8779 15.6019 13.8214 15.4032 14.1323C15.1902 14.4432 14.594 15.1357 14.4236 15.3477C14.2391 15.5596 14.0545 15.5738 13.7564 15.4183C13.4441 15.2629 12.4361 14.9378 11.2578 13.8779C10.335 13.0582 9.71039 12.0407 9.52584 11.7298C9.34128 11.4189 9.51164 11.2493 9.6678 11.0938C9.80977 10.9525 9.98012 10.7264 10.1363 10.5568C10.2924 10.3731 10.3492 10.2459 10.4486 10.0339C10.548 9.82193 10.5054 9.65235 10.4202 9.49689C10.3492 9.34144 9.72459 7.81515 9.45485 7.19333C9.19932 6.58564 8.94378 6.67044 8.75923 6.6563C8.57467 6.64217 8.37592 6.64217 8.16298 6.64217C7.95003 6.64217 7.62351 6.71283 7.33958 7.02374C7.05565 7.33465 6.24645 8.08366 6.24645 9.60995C6.24645 11.1362 7.36797 12.606 7.50994 12.818C7.6519 13.0441 9.682 16.1673 12.8052 17.5099Z"
+                                  fill="#02C399"/>
+                        </svg>
+                    </a>
+                    <a href="" class="ag-question-icon" id="ag-question-icon-telegram" target="_blank">
+                        <svg width="25" height="21" viewBox="0 0 25 21" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.09091 20C8.33982 20 8.46751 19.7219 8.20845 19.0204L6 11.8919L23 2"
+                                  fill="#C8DAEA"/>
+                            <path d="M9.79391 13.8587L19.0588 20.714C20.1161 21.2982 20.879 20.9956 21.1424 19.731L24.9137 1.9327C25.2998 0.382398 24.3236 -0.320993 23.3121 0.138917L1.16718 8.6907C-0.344399 9.29796 -0.335395 10.1426 0.891685 10.5188L6.57457 12.2953L19.7311 3.98262C20.3522 3.60541 20.9223 3.80802 20.4545 4.22399"
+                                  fill="#419FD9"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="ag-export-notice hidden">
+                    <span data-lang-id="50">Attention: Tite is not in the auction</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Calculator-->
+    <div class="item-block calculator-block">
+        <div class="item-block-body">
+            <div class="ag-calculator hidden" id="ag-calculator">
+                <div class="item-block-header"  data-lang-id="78">
+                    Calculator:
+                </div>
+                <div class="ag-calc-vehicle-block">
+                    <div class="ag-calc-vehicle-item">
+                        <div class="ag-selector-label" data-lang-id="18">Car type:</div>
+                        <div class="ag-calc-selector_restyle" id="ag-vehicle-type">
+                            <span class="ag-calc-selector-viewer" data-select="">Select</span>
+                            <ul>
+                                <li data-value="price">CAR</li>
+                                <li data-value="price_pickup">PICKUP</li>
+                                <li data-value="price_suv">SUV</li>
+                                <li data-value="price_van">VAN</li>
+                                <li data-value="price_moto">MOTO</li>
+                                <li data-value="price_travel_trailer">TRAVEL TRAILER</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ag-calc-vehicle-item">
+                        <div class="ag-selector-label" data-lang-id="19">Fuel:</div>
+                        <div class="ag-calc-vehicle-value ag-selector-label-value" id="ag-vehicle-fuel"></div>
+                    </div>
+                    <div class="ag-calc-vehicle-item">
+                        <div class="ag-selector-label" data-lang-id="20">Year:</div>
+                        <input type="text" size="3" data-max-size="3" class="ag-selector-label-value"
+                               id="ag-vehicle-year">
+                    </div>
+                    <div class="ag-calc-vehicle-item hidden">
+                        <div class="ag-selector-label" data-lang-id="21">Engine Type :</div>
+                        <input type="text" size="3" data-max-size="3" class="ag-selector-label-value"
+                               id="ag-vehicle-engine" value="0" readonly>
+                    </div>
+                    <div class="ag-calc-vehicle-item hidden">
+                    </div>
+                    <div class="ag-calc-vehicle-item hidden">
+                        <div class="ag-selector-label" data-lang-id="45">Battery::</div>
+                        <input type="text" size="3" data-max-size="3" class="ag-selector-label-value"
+                               id="ag-vehicle-battery" value="0">
+                    </div>
+                </div>
+                <div class="ag-calc-input-multiblock">
+                    <div class="ag-calc-input-block" id="ag-calc-cost">
+                        <div class="ag-calc-input-block_label" data-lang-id="22">
+                            Your winning bid, USD:
+                        </div>
+                        <div class="ag-calc-input-block_field">
+                            <input type="text" class="ag-calc-lot-cost" placeholder="Input" data-lang-id="72">
+                        </div>
+                    </div>
+                    <div class="ag-calc-input-block" id="ag-calc-fee-level">
+                        <div class="ag-calc-input-block_label" data-lang-id="28">
+                            Fee:
+                        </div>
+                        <div class="ag-calc-input-block_field">
+                            <div class="ag-calc-selector_restyle" id="ag-fee-selector">
+                                <span class="ag-calc-selector-viewer" data-select=""></span>
+                                <ul>
+                                    <li data-value="high" data-lang-id="76">High fee</li>
+                                    <li data-value="low" data-lang-id="77">Low fee</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ag-calc-input-block" id="ag-port-usa">
+                    <div class="ag-calc-input-block_label" data-lang-id="23">
+                        Delivery by land to a port?
+                    </div>
+                    <div class="ag-calc-input-block_field">
+                        <div class="ag-calc-selector_restyle" id="ag-port-selector">
+                            <span class="ag-calc-selector-viewer" data-select="" data-lang-id="71"></span>
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ag-calc-input-block hidden" id="ag-port-delivery-sea">
+                    <div class="ag-calc-input-block_label" data-lang-id="24">
+                        Delivery by see to a port?
+                    </div>
+                    <div class="ag-calc-input-block_field">
+                        <div class="ag-calc-selector_restyle" id="ag-delivery-sea-selector">
+                            <span class="ag-calc-selector-viewer" data-select=""  data-lang-id="71"></span>
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ag-calc-input-block hidden" id="ag-custom-country">
+                    <div class="ag-calc-input-block_label" data-lang-id="25">
+                        Custom, country (optional)?
+                    </div>
+                    <div class="ag-calc-input-block_field">
+                        <div class="ag-calc-selector_restyle" id="ag-custom-country-selector">
+                            <span class="ag-calc-selector-viewer" data-select=""  data-lang-id="71"></span>
+                            <ul>
+                                <li></li>
+                                <li data-value="Ukraine">Ukraine</li>
+                                <li data-value="Europe"> EU countries</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ag-calc-input-block hidden" id="ag-custom-delivery">
+                    <div class="ag-calc-input-block_label" data-lang-id="74">
+                        Delivery
+                    </div>
+                    <div class="ag-calc-input-block_field">
+                        <input type="text" class="ag-calc-custom-delivery" placeholder="Input" data-lang-id="72" value="1000">
+                    </div>
+                </div>
+                <div class="ag-calc-price-block"></div>
+            </div>
+            <div class="ag-calc-notice-Block">
+                <div class="ag-calc-delivery-notice hidden"></div>
+                <div class="ag-customs-clearance-notice ">
+                    <span data-lang-id="26">The calculation cost of customs clearance is calculated today at the rate of EURO to USDT</span>
+                    <span class="ag-customs-clearance-course"></span>
+                </div>
+                <div class="ag-not-auth-notice hidden">
+                    <span data-lang-id="46">To calculate the cost of delivery of a car, you need to register in the service and enter the price list</span>
+                    <a href="https://auctiongate.io/register" data-link="register" target="_blank" data-lang-id="47"
+                       class="ag-register-link">Sign Up</a>
+                </div>
+                <div class="ag-not-ports-notice hidden">
+                    <span data-lang-id="51">To calculate the cost of delivery of a car, it is necessary to add the location of the auction and the warehouse to the price list.</span>
+<!--                    <a href="https://auctiongate.io/price-list" data-link="priceList" target="_blank" data-lang-id="52"-->
+<!--                       class="ag-edit-price-link">Add data</a>-->
+                </div>
+                <div class="ag-not-fraht-notice hidden">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
